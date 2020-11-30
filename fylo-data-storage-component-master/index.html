@@ -22,49 +22,57 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        margin-top: 40px;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
     </style>
   </head>
-  <body class="bg-image">
-    <main class="container">
-      <section class="left-container">
-        <div class="logo"><img src="images/logo.svg" alt="" /></div>
-        <div class="data-process">
-          <div class="data-item file">
-            <img src="images/icon-document.svg" alt="document" />
-          </div>
-          <div class="data-item document">
-            <img src="images/icon-folder.svg" alt="folder" />
-          </div>
-          <div class="data-item upload">
-            <img src="images/icon-upload.svg" alt="upload" />
-          </div>
-        </div>
-      </section>
+  <body>
+    <main class="container bg-image">
 
-      <section class="right-container">
-        <p>You’ve used 815 GB of your storage</p>
-        <div class="usage">
-          <div class="progress-dot"><div class="dot"></div></div>
-          <div class="usage-bandwidth">
-            <span>0 GB</span><span>1000 GB</span>
+
+      <div class="panel-group-row">
+        <section class="left-container">
+          <div class="logo"><img src="images/logo.svg" alt="" /></div>
+          <div class="data-process">
+            <div class="data-item file">
+              <img src="images/icon-document.svg" alt="document" />
+            </div>
+            <div class="data-item document">
+              <img src="images/icon-folder.svg" alt="folder" />
+            </div>
+            <div class="data-item upload">
+              <img src="images/icon-upload.svg" alt="upload" />
+            </div>
           </div>
-          <div class="bandwidth-left">
-            <span class="bandwidth-left-size">185</span><span>GB LEFT</span>
+        </section>
+
+        <section class="right-container">
+          <p>You’ve used <span>815 GB</span> of your storage</p>
+          <div class="usage">
+            <div class="usage-bar">
+               <div class="progress-dot"><div class="dot"></div></div>
+            </div>
           </div>
-        </div>
-      </section>
+            <div class="usage-bandwidth">
+              <span>0 GB</span><span>1000 GB</span>
+            </div>
+            <div class="bandwidth-left">
+              <span class="bandwidth-left-size">185</span><span>GB LEFT</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.github.com/Hubnotch">Hubnotch</a>.
+      </div>
     </main>
     <!-- 185 GB Left 0 GB 1000 GB --->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
   </body>
 </html>
