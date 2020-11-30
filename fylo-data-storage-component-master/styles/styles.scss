@@ -1,0 +1,49 @@
+$PaleBlue: hsl(243, 100%, 93%);
+$GrayishBlue: hsl(229, 7%, 55%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+$Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: $GrayishBlue;
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .bg-image {
+    background-image: url("/images/bg-desktop.svg");
+    /*background: $VeryDarkBlue;*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 45%;
+    margin: auto;
+}
+
+/*MOBILE LAYOUT FIRST*/
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 1440px) {
+}
