@@ -17,11 +17,12 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   color: $GrayishBlue;
-  height: 100vh;
+  height: 100%;
 }
 .bg-image {
   background-image: url("../images/bg-desktop.svg");
   height: 100%;
+  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,6 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  transition: all .5s ease-in;
 }
 
 .panel-group-row {
@@ -53,6 +55,7 @@ body {
     padding: 2rem;
     width: 250px;
     border-radius: 10px 80px 10px 10px;
+    transition: all .5s ease-in;
 
     .logo img {
       width: 100px;
@@ -73,10 +76,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease-in;
   }
 
   .right-container {
     //flex:60%;
+    align-self: flex-end;
     background: $DarkBlue;
     width: 500px;
     position: relative;
@@ -86,6 +91,8 @@ body {
 .right-container {
   padding: 1.5rem 2.9rem;
   border-radius: 10px;
+  position: relative;
+  transition: all .5s ease-in;
 
   p {
     padding: 0.5rem 0 1rem;
@@ -112,8 +119,8 @@ body {
       }
     }
     .bar-length {
-       width: 75%;
-       background: hsl(335, 100%, 65%);
+      width: 75%;
+      background: hsl(335, 100%, 65%);
     }
   }
   .usage-bandwidth {
@@ -122,18 +129,80 @@ body {
     display: flex;
     justify-content: space-between;
     color: $PaleBlue;
+    transition: all .5s ease-in;
+  }
+
+  .bandwidth-left {
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -42px;
+    right: 25px;
+    background-color: #fff;
+    transition: all .5s ease-in;
+
+    &::after {
+      content: "";
+      height: 40px;
+      width: 10px;
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      border-width: 10px 10px 10px 10px;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    .bandwidth-left-size {
+      color: $VeryDarkBlue;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    .gigabyte {
+      font-size: 10px;
+      padding: 0.5rem;
+    }
   }
 }
 
 /*MOBILE LAYOUT FIRST*/
 
+
 @media (max-width: 375px) {
-}
+  .panel-group-row {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-@media (max-width: 1440px) {
-}
+    .left-container {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
 
-/*
+    .right-container {
+      width: 100%;
+    }
+
+    .bandwidth-left {
+      top: 85%;
+      right: 25%;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+  }
+
+  /*
  width: 90%;
   height: 100vh;
   margin: 0 auto;
@@ -159,3 +228,4 @@ body {
 }
 
 */
+}
